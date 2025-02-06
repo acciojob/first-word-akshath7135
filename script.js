@@ -1,5 +1,8 @@
 function firstWord(s) {
-  // your code here
+ return s.split(' ')[0];
+	return s.trim().split(' ')[0]; 
+	console.log(firstWord('1234')); 
+	console.log(firstWord(' '));
 }
 
 // Do not change the code below
