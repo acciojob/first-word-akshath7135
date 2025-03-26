@@ -1,11 +1,12 @@
 function firstWord(s) {
- return s.split(' ')[0];
-	return s.trim().split(' ')[0]; 
-	console.log(firstWord('1234')); 
-	console.log(firstWord(' '));
+    // Trim leading spaces and find the first space
+    let trimmed = s.trim();
+    let index = trimmed.indexOf(" ");
+    
+    // If no space is found, return the entire string
+    return index === -1 ? trimmed : trimmed.slice(0, index);
 }
 
 // Do not change the code below
-
 const s = prompt("Enter String:");
 alert(firstWord(s));
